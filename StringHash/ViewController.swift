@@ -53,13 +53,29 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         hashValueLabel.adjustsFontSizeToFitWidth = true
         hashValueLabel.layer.masksToBounds = true
         hashValueLabel.layer.cornerRadius = 4
+        
+        let keyboardToolBar = UIToolbar()
+        keyboardToolBar.sizeToFit()
+        
+        let deleteText = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.undo, target: nil, action: #selector(self.keyboardDeleteClicked))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.keyboardDoneClicked) )
+        
+        keyboardToolBar.setItems([deleteText, flexibleSpace, doneButton], animated: true)
+        
+        hashTextField.inputAccessoryView = keyboardToolBar
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    @objc func keyboardDeleteClicked(){
+        hashTextField.text = ""
     }
     
-    
+    @objc func keyboardDoneClicked(){
+        hashValueLabel.text = "Loading..."
+        getHashData(url: HASH_URL, parameters: ["q" : hashTextField.text!, "h" : chosenHashValue])
+        view.endEditing(true)
+    }
+
     
     // MARK: - UIPickerViewDataSource methods
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -100,7 +116,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             
         }
     }
-    
+
     
     
     // MARK: - IBAction methods

@@ -85,7 +85,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
                                     </pickerView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNL-Iw-9Uf">
-                                        <rect key="frame" x="132" y="214" width="110" height="48"/>
+                                        <rect key="frame" x="132" y="250" width="110" height="48"/>
                                         <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <state key="normal" title="Hash!">
@@ -99,7 +99,7 @@
                                 <constraints>
                                     <constraint firstItem="Tw1-qV-ZmY" firstAttribute="leading" secondItem="ZOf-bk-pml" secondAttribute="leading" id="5vK-Wv-s8U"/>
                                     <constraint firstItem="Tw1-qV-ZmY" firstAttribute="top" secondItem="ZOf-bk-pml" secondAttribute="top" id="NPu-zV-myy"/>
-                                    <constraint firstItem="bNL-Iw-9Uf" firstAttribute="top" secondItem="ZOf-bk-pml" secondAttribute="top" constant="214" id="OGr-Oq-j4o"/>
+                                    <constraint firstItem="bNL-Iw-9Uf" firstAttribute="top" secondItem="ZOf-bk-pml" secondAttribute="top" constant="250" id="OGr-Oq-j4o"/>
                                     <constraint firstAttribute="trailing" secondItem="Tw1-qV-ZmY" secondAttribute="trailing" id="RNG-fw-pT8"/>
                                     <constraint firstItem="bNL-Iw-9Uf" firstAttribute="leading" secondItem="ZOf-bk-pml" secondAttribute="leading" constant="132" id="Td5-UF-L1m"/>
                                     <constraint firstAttribute="trailing" secondItem="bNL-Iw-9Uf" secondAttribute="trailing" constant="133" id="w5C-TY-DAU"/>
